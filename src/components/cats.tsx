@@ -1,4 +1,5 @@
 import { useGetCatData } from '../hooks/use-get-cat-data';
+import type { CatBreed } from '../types';
 import { CatCard } from './cat-card';
 
 const GET_CATS_URL = 'https://api.thecatapi.com/v1/breeds';
@@ -42,7 +43,7 @@ export const Cats = () => {
       <div
         style={{ display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap' }}
       >
-        {data.map((catBreed) => (
+        {data.map((catBreed: CatBreed) => (
           <CatCard catImage={catBreed.image} breedId={catBreed.id} />
         ))}
       </div>

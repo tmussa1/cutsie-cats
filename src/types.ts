@@ -6,6 +6,7 @@ export type CatImage = {
 };
 
 export type CatBreed = {
+  id: string;
   name: string;
   temperament: string;
   origin: string;
@@ -33,9 +34,11 @@ export type CatBreed = {
   suppressed_tail: number;
   short_legs: number;
   hypoallergenic: number;
+  image: CatImage;
 };
 
 export const CAT_BREED_KEYS = {
+  id: false,
   name: true,
   temperament: true,
   origin: true,
@@ -63,4 +66,5 @@ export const CAT_BREED_KEYS = {
   suppressed_tail: true,
   short_legs: true,
   hypoallergenic: true,
-} satisfies Record<keyof CatBreed, true>;
+  image: false
+} satisfies Record<keyof CatBreed, boolean>;
