@@ -1,10 +1,9 @@
 export type CatImage = {
-    id: string;
-    height: number;
-    width: number;
-    url: string;
-} 
-
+  id: string;
+  height: number;
+  width: number;
+  url: string;
+};
 
 export type CatBreed = {
   name: string;
@@ -65,4 +64,3 @@ export const CAT_BREED_KEYS = {
   short_legs: true,
   hypoallergenic: true,
 } satisfies Record<keyof CatBreed, true>;
-
